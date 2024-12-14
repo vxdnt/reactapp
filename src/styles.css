@@ -1,0 +1,118 @@
+/* General Container */
+.chatbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Form Section */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-bottom: 2px solid black; /* Black bottom line on focus */
+}
+
+/* Form Buttons */
+.form-button {
+  width: 50%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.form-button:hover {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid black;
+}
+
+.form-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+h2, h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* Intro Screen Styles */
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  z-index: 9999;
+  opacity: 1;
+  color: #fff;
+  transition: opacity 1s ease-out;
+}
+
+.logo {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+/* Fade-in animation for the logo */
+.intro-screen img, h4 {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* When the intro screen fades out */
+.intro-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show the main content */
+.content {
+  display: block;
+}
